@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images:{
     unoptimized : true,
+    domains  : ["images-na.ssl-images-amazon.com"],
   }
 }
 
