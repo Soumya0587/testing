@@ -1,22 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import axios from 'axios'
-import { useRouter } from 'next/router';
-const Singlecard = ({data}) => {
-    const router= useRouter()
-    const senddata = async(obj)=>{
-        axios.post(`https://movies-database-gold.vercel.app/movies`,obj)
-        .then(res=>{
-            alert("success")
-            
 
-    })
-        .catch(err=>alert(err))
-      }
+const Singlecard = ({data}) => {
+   
+    
     
   return <div>
     <h1>{data.Title}</h1>
-    
+    <Image src={data.Images[0]} alt="dfg" width={100} height={100} />
     <button onClick={()=>senddata(data)}>add to wishlist</button>
   </div>;
 };
